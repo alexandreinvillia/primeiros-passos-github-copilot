@@ -38,6 +38,42 @@ activities = {
       "schedule": "Segundas, quartas e sextas, 14h - 15h",
       "max_participants": 30,
       "participants": ["john@mergington.edu", "olivia@mergington.edu"]
+   },
+   "Futebol": {
+      "description": "Treinamento e competições de futebol",
+      "schedule": "Terças e quintas, 16h30 - 18h",
+      "max_participants": 22,
+      "participants": ["lucas@mergington.edu"]
+   },
+   "Voleibol": {
+      "description": "Treinamento e jogos de voleibol",
+      "schedule": "Segundas e quartas, 15h - 16h30",
+      "max_participants": 18,
+      "participants": ["ana@mergington.edu"]
+   },
+   "Clube de Teatro": {
+      "description": "Prepare-se para apresentações teatrais e desenvolva habilidades de atuação",
+      "schedule": "Quartas, 17h - 18h30",
+      "max_participants": 15,
+      "participants": ["lucas_arte@mergington.edu"]
+   },
+   "Aula de Música": {
+      "description": "Aprenda instrumentos musicais e participe de apresentações",
+      "schedule": "Sextas, 14h - 15h",
+      "max_participants": 20,
+      "participants": ["gabriel@mergington.edu", "laura@mergington.edu"]
+   },
+   "Clube de Matemática": {
+      "description": "Resolva problemas desafiadores e participe de olimpíadas de matemática",
+      "schedule": "Terças, 16h - 17h",
+      "max_participants": 16,
+      "participants": ["thomas@mergington.edu"]
+   },
+   "Clube de Leitura": {
+      "description": "Discuta livros e desenvolvapaixão pela leitura",
+      "schedule": "Quartas, 15h30 - 16h30",
+      "max_participants": 25,
+      "participants": ["clara@mergington.edu", "pedro@mergington.edu"]
    }
 }
 
@@ -62,6 +98,7 @@ def signup_for_activity(activity_name: str, email: str):
     # Get the specificy activity
     activity = activities[activity_name]
 
+# Validar se o estudante já está inscrito
     # Add student
     activity["participants"].append(email)
     return {"message": f"{email} inscrito(a) em {activity_name} com sucesso"}
